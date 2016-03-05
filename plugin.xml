@@ -2,12 +2,14 @@
 <plugin 
     xmlns="http://apache.org/cordova/ns/plugins/1.0" 
     id="my-custom-bis-plugin" 
-    version="0.0.1"
+    version="0.0.2"
 >
 
     <name>My Custom BIS Plugin</name>
     <description>Add BIS info to iOS plist file.</description>
     <license>BSD-3</license>
+
+    <preference name="BIS_KEY" />
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
@@ -19,7 +21,7 @@
             <array>
                 <dict>
                     <key>ITSAppUsesNonExemptEncryption</key><true/>
-                    <key>ITSEncryptionExportComplianceCode</key><string> [ Key Value ] </string>
+                    <key>ITSEncryptionExportComplianceCode</key><string>$BIS_KEY</string>
                 </dict>
             </array>
         </config-file>
