@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>  
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="my-custom-bis-plugin" version="1.0.0"> 
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+    xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+    id="my-custom-bis-plugin" 
+    version="0.0.1"
+>
 
-    <name>My Custom BIS Plugin</name> 
-    <description>Add BIS info to iOS plist file.</description> 
-    <license>MIT</license> 
+    <name>My Custom BIS Plugin</name>
+    <description>Add BIS info to iOS plist file.</description>
+    <license>BSD-3</license>
 
-    <engines> 
-        <engine name="cordova" version=">=3.0.0" /> 
-    </engines>  
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
 
-    <!-- ios --> 
-    <platform name="ios"> 
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes"> 
+    <!-- ios -->
+    <platform name="ios">
+        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
             <array>
                 <dict>
                     <key>ITSAppUsesNonExemptEncryption</key><true/>
                     <key>ITSEncryptionExportComplianceCode</key><string> [ Key Value ] </string>
                 </dict>
             </array>
-        </config-file> 
-    </platform>  
+        </config-file>
+    </platform>
+
 </plugin>
