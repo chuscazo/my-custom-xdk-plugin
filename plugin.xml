@@ -16,11 +16,13 @@
     <!-- ios -->
     <platform name="ios">
         <config-file target="*-Info.plist" parent="UIBackgroundModes" overwrite="true">
-		<key>CFBundleLocalizations</key>
-		<array>
-			<string>de</string>
-		</array>
-		<key>ITSAppUsesNonExemptEncryption</key><false/>
+        	<dict>
+			<key>CFBundleLocalizations</key>
+			<array>
+				<string>de</string>
+			</array>
+			<key>ITSAppUsesNonExemptEncryption</key><false/>
+		</dict>
 	</config-file>
     </platform>
 
