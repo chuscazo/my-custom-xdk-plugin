@@ -5,11 +5,9 @@
     version="0.0.2"
 >
 
-    <name>My Custom BIS Plugin</name>
-    <description>Add BIS info to iOS plist file.</description>
+    <name>My Custom XDK Plugin</name>
+    <description>Add info to iOS plist file.</description>
     <license>BSD-3</license>
-
-    <preference name="BIS_KEY" />
 
     <engines>
         <engine name="cordova" version=">=3.0.0" />
@@ -17,14 +15,12 @@
 
     <!-- ios -->
     <platform name="ios">
-        <config-file target="*-Info.plist" parent="CFBundleURLTypes">
-            <array>
-                <dict>
-                    <key>ITSAppUsesNonExemptEncryption</key><true/>
-                    <key>ITSEncryptionExportComplianceCode</key><string>$BIS_KEY</string>
-                </dict>
-            </array>
-        </config-file>
+        <config-file target="*-Info.plist" parent="UIBackgroundModes" overwrite="true">
+			<key>CFBundleLocalizations</key>
+			<array>
+				<string>de</string>
+			</array>
+		</config-file>
     </platform>
 
 </plugin>
