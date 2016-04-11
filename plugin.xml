@@ -9,21 +9,16 @@
     <description>Add info to iOS plist file.</description>
     <license>BSD-3</license>
 
-    <engines>
-        <engine name="cordova" version=">=3.0.0" />
-    </engines>
-
     <!-- ios -->
     <platform name="ios">
-        <config-file target="*-Info.plist" parent="UIBackgroundModes" overwrite="true">
-        	<dict>
-			<key>CFBundleLocalizations</key>
-			<array>
-				<string>de</string>
-			</array>
-			<key>ITSAppUsesNonExemptEncryption</key><false/>
-		</dict>
-	</config-file>
+        <config-file target="*-Info.plist" parent="CFBundleLocalizations">    
+            <array>
+			 <string>de</string>
+            </array>
+        </config-file>
+        <config-file target="*-Info.plist" parent="ITSAppUsesNonExemptEncryption">
+		  <false/>
+        </config-file>
     </platform>
 
 </plugin>
